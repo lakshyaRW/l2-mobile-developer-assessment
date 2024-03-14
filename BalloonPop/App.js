@@ -15,13 +15,7 @@ export default function App() {
     // Clean up interval on component unmount
     return () => clearInterval(interval);
   }, []);
-  useEffect(() => {
-    const scoreReductionInterval = setInterval(() => {
-      setScore(prevScore => prevScore - 1); // Reduce score by 1 every 8 seconds
-    }, 8000);
-     // Clean up interval on component unmount
-     return () => clearInterval(scoreReductionInterval);
-    }, []);
+ 
   useEffect(() => {
     if (time === 0) {
       // Game over logic
